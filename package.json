@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node backend/src/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.23.0",

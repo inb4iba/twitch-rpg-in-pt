@@ -1,7 +1,7 @@
 const streams = [];
 
 (async () => {
-  const res = await axios.get("http://localhost:3000/");
+  const res = await axios.get("http://localhost:5100/api");
   streams.push(...res.data);
 
   updateOnlineLiveCounter(streams.length);
