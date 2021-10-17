@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-primary-500: hsl(271, 78%, 30%);
+  --clr-primary-700: hsl(271, 78%, 16%);
+
+  --clr-mature-500: hsl(345, 86%, 38%);
+  --clr-mature-700: hsl(345, 86%, 24%);
+
+  --clr-neutral-100: #edefeb;
+  --clr-neutral-900: #121223;
+
+  --ff-primary: "Poppins", sans-serif;
+  --ff-secondary: serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125;
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bg-dark {
+  background-color: var(--clr-neutral-900);
+}
+
+.text-light {
+  color: var(--clr-neutral-100);
+}
+
+#header {
+  margin: 1rem auto;
+  padding-left: 2rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.sub-header {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.container {
+  padding: 1rem 0;
+  margin-inline: auto;
+  width: min(90%, 60.5rem);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.25rem;
+  row-gap: 2.25rem;
+}
+
+@media (min-width: 30em) {
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 50em) {
+  .split {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  position: relative;
+  padding: 0 1rem 0.5rem;
+  /* background: linear-gradient(var(--clr-primary-500), var(--clr-primary-700)); */
+  background: var(--clr-primary-700);
+  border-radius: 0.5rem;
+  box-shadow: 0 7px 8px #0005;
+}
+
+.mature {
+  border: 0.2rem solid var(--clr-mature-500);
+}
+
+.mature::after {
+  content: "+18";
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translate(100%, 50%);
+  background: var(--clr-primary-700);
+  padding: 0.1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--clr-mature-500);
+  box-shadow: 0 7px 8px #0005;
+  font-weight: 900;
+}
+
+.avatar {
+  position: absolute;
+  max-width: 15%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: 0 7px 8px #0005;
+}
+
+.userDiv {
+  margin-left: calc(15% + 1rem);
+  overflow: hidden;
+}
+
+.user {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 0.25rem;
+}
+
+.thumb {
+  border-radius: 0.5rem;
+  box-shadow: 0 7px 8px #0005;
+  margin: 0.5rem 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+}

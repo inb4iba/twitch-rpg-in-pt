@@ -51,6 +51,7 @@ function getOnlineTime(time, user_idx) {
 
 function updateOnlineLiveCounter(counter) {
   const h2 = document.createElement("h2");
+  h2.className = "sub-header";
   h2.innerHTML = `Estamos com <span>${counter}</span> lives online.`;
   document.getElementById("header").append(h2);
 }
@@ -88,7 +89,7 @@ function createCards(streams) {
 
       const streamTitle = document.createElement("p");
       streamTitle.textContent =
-        title.length >= 31 ? `${title.substr(0, 28)}...` : title;
+        title.length >= 30 ? `${title.substr(0, 27)}...` : title;
       streamTitle.className = "title";
 
       const thumb = document.createElement("img");
@@ -114,6 +115,7 @@ function createCards(streams) {
       const link = document.createElement("a");
       link.href = `https://twitch.tv/${user_name}`;
       link.target = "_blank";
+      link.className = "text-light";
       link.append(card);
       let isover = false;
       let animation;
