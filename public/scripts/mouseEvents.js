@@ -69,7 +69,6 @@ function addUserAnimation(element) {
       duration: animDuration,
       iterations: Infinity,
       direction: "alternate",
-      easing: "ease-in-out",
     }
   );
 }
@@ -92,7 +91,6 @@ function addTitleAnimation(element) {
       duration: animDuration,
       iterations: Infinity,
       direction: "alternate",
-      easing: "ease-in-out",
     }
   );
 }
